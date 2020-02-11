@@ -9,48 +9,88 @@ const typeDefs = gql`
   # This "Book" type defines the queryable fields for every book in our data source.
   type Book {
     title: String
-    author: String
+    author: Author
   }
+
   type Author {
-    author: String
+    name: String
+    books: [Book]
   }
 
   # The "Query" type is special: it lists all of the available queries that
   # clients can execute, along with the return type for each. In this
   # case, the "books" query returns an array of zero or more Books (defined above).
   type Query {
-    books: [Book]
-    authors: [Author]
+    getBooks: [Book]
+    getAuthors: [Author]
   }
 `;
 
 const books = [
   {
     title: "Harry Potter and the Chamber of Secrets",
-    author: "J.K. Rowling"
+    author: {
+      name: "JFROMMM"
+    }
   },
   {
     title: "Jurassic Park",
-    author: "Michael Crichton"
+    author: {
+      name: "VRAUUUUU"
+    }
   }
 ];
 
 const authors = [
   {
-    author: "J.K. Rowling"
+    name: "J.K. Rowling",
+    books: [
+      {
+        title: "Harry Potter and the Chamber of Secrets",
+        author: "J.K. Rowling"
+      },
+      {
+        title: "Jurassic Park",
+        author: {
+          name: "VRAUUUUU"
+        }
+      }
+    ]
   },
   {
-    author: "Felipe Muner"
+    name: "Felipe Muner",
+    books: [
+      {
+        title: "qwe",
+        author: {
+          name: "VRAUUUUU"
+        }
+      }
+    ]
   },
   {
-    author: "Monteiro Lobato"
+    name: "Monteiro Lobato",
+    books: [
+      {
+        title: "123",
+        author: {
+          name: "VRAUUUUU"
+        }
+      },
+      {
+        title: "890",
+        author: {
+          name: "VRAUUUUU"
+        }
+      }
+    ]
   }
 ];
 
 const resolvers = {
   Query: {
-    books: () => books,
-    authors: () => authors
+    getBooks: () => books,
+    getAuthors: () => authors
   }
 };
 
