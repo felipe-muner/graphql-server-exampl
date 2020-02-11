@@ -30,13 +30,13 @@ const books = [
   {
     title: "Harry Potter and the Chamber of Secrets",
     author: {
-      name: "JFROMMM"
+      name: "Random Name"
     }
   },
   {
     title: "Jurassic Park",
     author: {
-      name: "VRAUUUUU"
+      name: "Random Name 2"
     }
   }
 ];
@@ -52,7 +52,7 @@ const authors = [
       {
         title: "Jurassic Park",
         author: {
-          name: "VRAUUUUU"
+          name: "Random Name 3"
         }
       }
     ]
@@ -63,7 +63,7 @@ const authors = [
       {
         title: "qwe",
         author: {
-          name: "VRAUUUUU"
+          name: "Random Name 4"
         }
       }
     ]
@@ -74,13 +74,13 @@ const authors = [
       {
         title: "123",
         author: {
-          name: "VRAUUUUU"
+          name: "Random Name 5"
         }
       },
       {
         title: "890",
         author: {
-          name: "VRAUUUUU"
+          name: "Random Name 6"
         }
       }
     ]
